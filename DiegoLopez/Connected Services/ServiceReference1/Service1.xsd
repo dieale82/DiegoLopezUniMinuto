@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebApplication2" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebApplication2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfObjConsuta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjConsuta" nillable="true" type="tns:ObjConsuta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObjConsuta" nillable="true" type="tns:ArrayOfObjConsuta" />
+  <xs:complexType name="ObjConsuta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdDepto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMunicipio" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreDepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreMunicipio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjConsuta" nillable="true" type="tns:ObjConsuta" />
+</xs:schema>
